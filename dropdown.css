@@ -1,0 +1,102 @@
+:root {
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-black: #141d28;
+    --color-black-1: #212b38;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.logo{
+    color: aliceblue;
+    font-size: 30px;
+}
+.logo span{
+    color: var(--color-primary);
+}
+.menu-bar{
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+}
+.menu-bar ul{
+    list-style: none;
+    display: flex;
+}
+.menu-bar ul li{
+    padding: 10px 30px;
+    position: relative;
+}
+.menu-bar ul li a{
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.menu-bar ul li a:hover{
+    color: var(--color-white);
+    transition: 0.60s ease;
+}
+.fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+.dropdown-menu, .dropdown-menu-bar{
+    display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu, .menu-bar ul li:hover .dropdown-menu-bar{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+    transition: 0.60s ease;
+}
+.menu-bar ul li:hover .dropdown-menu ul, .menu-bar ul li:hover .dropdown-menu-bar ul{
+    display: block;
+    margin: 10px;
+    transition: 0.60s ease;
+}
+.menu-bar ul li:hover .dropdown-menu ul li, .menu-bar ul li:hover .dropdown-menu-bar ul li{
+    width: 150px;
+    padding: 10px;
+    transition: 0.60s ease;
+}
+
+.menu-bar ul li:hover .dropdown-menu-bar ul li:hover, .menu-bar ul li:hover .dropdown-menu ul li:hover{
+    background-color: #243d5c;
+    cursor: pointer;
+}
+
+  .hero {
+    height: calc(100vh - 80px);
+    background-image: url(./bg.jpg);
+    background-position: center;
+  }
+
+  .menu-bar ul li .active{
+    width: 120px;
+    padding: 10px;
+    height: 40px;
+    background-color: #243d5c;
+  }
+
+  h2{
+    text-align: center;
+    font-size: 50px;
+    color: #0073ff;
+    margin-top: 20%;
+  }
